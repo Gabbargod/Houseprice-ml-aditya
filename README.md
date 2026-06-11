@@ -1,50 +1,86 @@
-# House Price Prediction. Aditya Tiwari | MCA Student
+# House Price Prediction
 
-Pluto Academy AI & ML Internship
+## About This Project
+
+This is one of the projects from my Pluto Academy AI & Machine Learning Internship program where we were asked to develop and train several machine learning models to make predictions on house prices according to certain property factors.
 
 ## Dataset
 
-I worked on a project to predict house prices. For this project I used a dataset. The dataset is called House Prices: Advanced Regression Techniques. I got this dataset from Kaggle.
+**House Prices: Advanced Regression Techniques** dataset from Kaggle is being used in this particular project.
 
-The main file I used is called train.csv. This file has a lot of information. It has 1,460 rows and 81 columns. I used this file, train.csv to do my work, on house price prediction.
+**train.csv** is the main dataset and has 1,460 rows and 81 features regarding residential houses. The features present in this dataset are related to overall quality of the property, lot area, area covered by garage, year of construction, total rooms and many more.
 
-## Models Compared
+## Project Workflow
 
-| Model | RMSE | MAE | R2 Score |
-|---|---|---|---|
-| Linear Regression | 37148 | 23571 | 0.8201 |
-| Decision Tree | 38532 | 23997 | 0.8064 |
-| Random Forest | 29056 | 18321 | 0.8899 |
+### Data Preparation
 
-**Best Model: Random Forest Regressor**
-**The Best Model: Random Forest Regressor**
+Exploration of the data and handling of any missing values was done before proceeding towards developing and training the models. Additionally, the data was processed and prepared by selecting important features and encoding categorical features.
 
-## What I Did
+### Feature Analysis
 
-- I went through. Cleaned up all 81 columns of the dataset to get it ready for use.
+Correlation analysis was carried out on selected features. In order to increase the efficiency of our model and understand which features impact the dependent variable.
 
-- I picked the features that were closely related to each other to make the models work better.
+### Model Training
 
-- I built three machine learning models. Split the data into 80 percent for training and 20 percent for testing.
+Train Test Split of Data:
 
-- I compared the models using some metrics like RMSE, MAE and R2 to see how well they did.
+* Train: 80%
+* Test: 20%
 
-- I made a plot and a chart to show which features were most important so I could understand the results better.
+Three regression models have been developed and analyzed as follows:
 
-## Tools
+1. Linear Regression
+2. Decision Tree Regressor
+3. Random Forest Regressor
 
-I used Python. Some helpful libraries like Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn and Google Colab to get everything done.
 
-## Key Finding
+## Model Evaluation
 
-The build quality or OverallQual of a house is a predictor of its price.
+| Model                   | RMSE  | MAE   | R² Score |
+| ----------------------- | ----- | ----- | -------- |
+| Linear Regression       | 37148 | 23571 | 0.8201   |
+| Decision Tree Regressor | 38532 | 23997 | 0.8064   |
+| Random Forest Regressor | 29056 | 18321 | 0.8899   |
 
-The build quality of a house is actually more important than the footage of the house, which was a surprise to me.
+### Optimal Model
 
-The build quality of a house has an impact on the house price, than the square footage of the house.
+The **Random Forest Regressor** has proven to be the optimal choice as it demonstrated the smallest prediction errors (RMSE and MAE) and obtained the highest R² score.
+
+Thus, this model can be considered the most accurate one among all models analyzed.
+
+## Graphs and Plots
+
+In order to provide insights into data analysis and machine learning models used, I produced the following graphs:
+
+* Correlation heatmap
+* Feature importance plot
+* Residuals analysis plot
+* Models comparison plot
+
+## Technologies & Tools Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+* Google Colab
+
+## Key Observations
+
+The most fascinating observation made through this experiment was the significance of **OverallQual (Overall Quality)**.
+
+It was found that the Overall Quality of the house had more impact on the price than other features such as some size-related features. The houses that had good overall quality ratings were priced relatively higher.
+
+This demonstrated that the quality of construction and finishes are very significant factors when determining the value of a house.
+
+## Conclusion
+
+Through this project, I was able to gain practical knowledge about data pre-processing, feature engineering, model training, and model performance assessment. Comparison of different machine learning algorithms on the same dataset gave an insightful look into how models compare to one another.
 
 ## Author
 
-Aditya Tiwari MCA Student
-
-Email: Adityatiwari2211@gmail.com
+**Aditya Tiwari**
+MCA Student
+Pluto Academy AI & Machine Learning Internship
